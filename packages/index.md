@@ -1,8 +1,18 @@
 ---
 layout: home
-page: true
+hero:
+  name: VueThing
+  text: 一个面向web3D技术栈hooks工具库.
+  tagline: 持续更新...
 
-heroText: VueUse
+  actions:
+
+  - theme: brand
+    text: 开始
+    link: /guide/
+  - theme: alt
+    text: 仓库地址
+    link: https://github.com/vuejs/vitepress
 
 features:
 
@@ -21,4 +31,4 @@ features:
 
 footer: MIT Licensed | Copyright © 2022-present Melan
 ---
-<Home />
+  

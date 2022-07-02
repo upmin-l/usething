@@ -1,9 +1,11 @@
 export default {
     title: 'VueThing',
+    base: '/',
     description: 'Collection of essential Vue Composition Utilities',
     ignoreDeadLinks: true,
     themeConfig:{
         docsDir: 'packages',
+        logo:'/icon.png',
         editLinks: true,
         nav:[
             {

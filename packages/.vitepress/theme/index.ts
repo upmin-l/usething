@@ -3,8 +3,7 @@ import home from './view/Home.vue'
 
 export default {
     ...DefaultTheme,
-    Layout:home,
-    enhanceApp(ctx) {
-
+    enhanceApp({app}) {
+       app.component('home',home)
     }
 }

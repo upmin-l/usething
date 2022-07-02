@@ -1,14 +1,13 @@
 <template>
-  <main>
+  <main class="home" aria-labelledby="main-title">
     <home-hero />
+    <home-features />
   </main>
 </template>
 
-<script setup>
-import DefaultTheme from 'vitepress/theme'
-const { Layout } = DefaultTheme
-import { useData, withBase } from 'vitepress'
+<script setup lang="ts">
 import HomeHero from "./HomeHero.vue";
+import HomeFeatures from "./HomeFeatures.vue";
 </script>
 
 
