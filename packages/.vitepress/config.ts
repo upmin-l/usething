@@ -1,5 +1,5 @@
 export default {
-    title: 'VueUse',
+    title: 'VueThing',
     description: 'Collection of essential Vue Composition Utilities',
     ignoreDeadLinks: true,
     themeConfig:{
