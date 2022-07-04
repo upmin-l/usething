@@ -12,6 +12,7 @@
   "devDependencies": {
     "@types/node": "^18.0.0",
     "@vue/theme": "^1.0.2",
+    "fast-glob": "^3.2.11",
     "unocss": "^0.42.0",
     "unplugin-icons": "^0.14.7",
     "unplugin-vue-components": "^0.21.0",
