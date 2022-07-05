@@ -2,8 +2,8 @@
 layout: home
 hero:
   name: VueThing
-  text: 一个面向web3D技术栈hooks工具库.
-  tagline: 持续更新...
+  text: Vue3可视化hooks库.
+  tagline: 持续更新中...
 
   actions:
 
@@ -31,4 +31,4 @@ features:
 
 footer: MIT Licensed | Copyright © 2022-present Melan
 ---
-  
+<home />

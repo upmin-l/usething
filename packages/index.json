@@ -1,0 +1,35 @@
+{
+  "packages": {
+    "thing": {
+      "name": "thing",
+      "display": "ThingJs",
+      "description": "面向thingJs 封装的必要hooks",
+      "dir": "packages/thing",
+      "docs": "http://localhost:3000/thing/README.html"
+    },
+    "three": {
+      "name": "three",
+      "display": "ThreeJs",
+      "description": "面向thingJs 封装的必要hooks",
+      "dir": "packages/three",
+      "docs": "http://localhost:3000/three/README.html"
+    },
+    "chart": {
+      "name": "chart",
+      "display": "Chart",
+      "description": "面向thingJs 封装的必要hooks",
+      "dir": "packages/chart",
+      "docs": "http://localhost:3000/chart/README.html"
+    }
+  },
+  "categories": {},
+  "functions": [
+    {
+      "name": "useEcharts",
+      "package": "chart",
+      "docs": "http://localhost:3000/chart/useEcharts/",
+      "category": "Chart",
+      "description": "百度eChart 图表 初始化"
+    }
+  ]
+}
