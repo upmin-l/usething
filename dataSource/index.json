@@ -22,7 +22,9 @@
       "docs": "http://localhost:3000/chart/README.html"
     }
   },
-  "categories": {},
+  "categories": [
+    "chart"
+  ],
   "functions": [
     {
       "name": "useEcharts",

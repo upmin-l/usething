@@ -4,19 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docs": "vitepress dev packages"
+    "docs": "vitepress dev packages",
+    "build:rollup": "cross-env NODE_OPTIONS=\"--max-old-space-size=6144\" rollup -c"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/echarts": "^4.9.15",
     "@types/fs-extra": "^9.0.13",
     "@types/node": "^18.0.0",
     "@vue/theme": "^1.0.2",
     "chalk": "^5.0.1",
+    "cross-env": "^7.0.3",
+    "echarts": "^5.3.3",
     "fast-glob": "^3.2.11",
     "fs-extra": "^10.1.0",
     "gray-matter": "^4.0.3",
+    "rollup": "^2.75.7",
     "unocss": "^0.42.0",
     "unplugin-icons": "^0.14.7",
     "unplugin-vue-components": "^0.21.0",

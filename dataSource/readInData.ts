@@ -1,5 +1,5 @@
 import fg from 'fast-glob'
-import {packages} from "./packages";
+import {packages} from "../ds/packages";
 import {join, relative, resolve} from "path";
 // @ts-ignore
 import fs from 'fs-extra'
@@ -8,8 +8,8 @@ import chalk from 'chalk'
 export const DIR_ROOT = resolve(__dirname, '../')
 export const DIR_SRC = resolve(DIR_ROOT, 'packages')
 const DOCS_URL = 'http://localhost:3000'
-
-export default async function listPackages(dir: string) {
+import {PackageIndexes, VueTfn, VueTPackage} from "./types";
+async function listPackages(dir: string) {
     const files = await fg('*', {
         onlyDirectories: true,
         cwd: dir,
@@ -23,16 +23,18 @@ export default async function listPackages(dir: string) {
     return files
 }
 
+
+
 export async function readCoreData() {
-    const coreCon = {
+    const coreCon:PackageIndexes = {
         packages: {},
-        categories: {},
+        categories: [],
         functions: []
     }
     for (const key of packages) {
         const dir = join(DIR_SRC, key.name)
         const functions = await listPackages(dir)
-        const pkg = {
+        const pkg :VueTPackage = {
             ...key,
             dir: (relative(DIR_ROOT, dir).replace(/\\/g, '/')),
             docs: `${DOCS_URL}/${key.name}/README.html`
@@ -49,7 +51,7 @@ export async function readCoreData() {
             fn.docs = `${DOCS_URL}/${pkg.name}/${item}/`
             const mdRaw = await fs.readFile(mdPath, 'utf-8')
             // content 内容 data 类型
-            const {content: data, data: category} = matter(mdRaw)
+            const {content: data} = matter(mdRaw)
             // 获取描述
             let description = (
                 data.replace(/\r\n/g, '\n')
@@ -62,12 +64,13 @@ export async function readCoreData() {
             coreCon.functions.push(fn)
         }))
     }
+    coreCon.categories = ['chart']
     return coreCon
 }
 
 async function run() {
     const res = await readCoreData()
-    await fs.writeJSON(join(resolve(__dirname,'../packages/'), 'index.json'), res, { spaces: 2 })
+    await fs.writeJSON(join(resolve(__dirname,'./'), 'index.json'), res, { spaces: 2 })
 }
 
 run().then(() => {

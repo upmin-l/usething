@@ -3,11 +3,18 @@
     "target": "es2017",
     "module": "esnext",
     "moduleResolution": "node",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "noUnusedLocals": true,
+    "declarationDir": "./types",
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strict": true
   },
   "exclude": [
     "node_modules",
-    "**/**/*.stories.tsx",
     "**/**/*.md",
     "**/dist",
     "packages/.test",

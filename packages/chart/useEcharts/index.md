@@ -6,20 +6,18 @@ category: Chart
 
 百度eChart 图表 初始化
 
-> NOTE: If you're using Vue Router, use [`useRoute`](https://router.vuejs.org/guide/advanced/composition-api.html) provided by Vue Router instead.
+> NOTE: If you're using Vue Router, use [`useRoute`](https://router.vuejs.org/guide/advanced/composition-api.html)
 
 ## Usage
 
 ```js
-import { useBrowserLocation } from '@vueuse/core'
+import {watchEffect, ref} from 'vue'
+import {useEcharts} from 'vueThing/chart'
 
-const location = useBrowserLocation()
+const chart = ref(null)
+const [chart, updateOption] = useEcharts()
+watchEffect(() => {
+    updateOption('更新数据对象')
+})
 ```
 
-## Component Usage
-
-```html
-<UseBrowserLocation v-slot="{ location }">
-  Browser Location: {{ location }}
-</UseBrowserLocation>
-```
