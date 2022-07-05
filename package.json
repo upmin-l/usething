@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
     "@types/echarts": "^4.9.15",
     "@types/fs-extra": "^9.0.13",
     "@types/node": "^18.0.0",
@@ -22,6 +23,7 @@
     "fs-extra": "^10.1.0",
     "gray-matter": "^4.0.3",
     "rollup": "^2.75.7",
+    "rollup-plugin-esbuild": "^4.9.1",
     "unocss": "^0.42.0",
     "unplugin-icons": "^0.14.7",
     "unplugin-vue-components": "^0.21.0",

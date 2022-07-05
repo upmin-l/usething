@@ -1,7 +1,6 @@
 import fg from 'fast-glob'
 import {packages} from "../ds/packages";
 import {join, relative, resolve} from "path";
-// @ts-ignore
 import fs from 'fs-extra'
 import matter from 'gray-matter'
 import chalk from 'chalk'

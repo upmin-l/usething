@@ -1,4 +1,5 @@
-export const packages = [
+import type{PackageManifest} from '../dataSource'
+export const packages:PackageManifest[] = [
     {
         name: 'thing',
         display: 'ThingJs',
