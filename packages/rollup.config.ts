@@ -16,7 +16,8 @@ const externals = [
 ]
 for (const {name,target} of packages){
     for (const fn of functionNames){
-        const input =`packages/${name}/${fn}/index.ts`;
+        const input =`packages/${name}/index.ts`
+        console.log(input);
         // const info = functions.find(i => i.name === fn)
         const output: OutputOptions[] = []
         output.push({
@@ -38,5 +39,4 @@ for (const {name,target} of packages){
         })
     }
 }
-console.log(configs);
 export default configs

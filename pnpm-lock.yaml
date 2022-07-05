@@ -9,6 +9,7 @@ specifiers:
   chalk: ^5.0.1
   cross-env: ^7.0.3
   echarts: ^5.3.3
+  esbuild-register: ^3.3.3
   fast-glob: ^3.2.11
   fs-extra: ^10.1.0
   gray-matter: ^4.0.3
@@ -30,6 +31,7 @@ devDependencies:
   chalk: 5.0.1
   cross-env: 7.0.3
   echarts: 5.3.3
+  esbuild-register: 3.3.3
   fast-glob: 3.2.11
   fs-extra: 10.1.0
   gray-matter: 4.0.3
@@ -928,6 +930,12 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /esbuild-register/3.3.3:
+    resolution: {integrity: sha512-eFHOkutgIMJY5gc8LUp/7c+LLlDqzNi9T6AwCZ2WKKl3HmT+5ef3ZRyPPxDOynInML0fgaC50yszPKfPnjC0NQ==}
+    peerDependencies:
+      esbuild: '>=0.12 <1'
+    dev: true
 
   /esbuild-sunos-64/0.14.48:
     resolution: {integrity: sha512-77m8bsr5wOpOWbGi9KSqDphcq6dFeJyun8TA+12JW/GAjyfTwVtOnN8DOt6DSPUfEV+ltVMNqtXUeTeMAxl5KA==}
