@@ -1,7 +1,7 @@
 import * as echarts from 'echarts'
 import { markRaw, onMounted, onUnmounted, ref} from 'vue'
 
-export const useEcharts = (option, callback) => {
+export const useEcharts = (option:Object, callback:Function) => {
     const chart = ref()
     const chartInstance = markRaw({
         ctx: null
@@ -10,12 +10,14 @@ export const useEcharts = (option, callback) => {
     /**
      * @param {object} ops echarts配置
      */
-    function updateOption(ops) {
+    function updateOption(ops:Object) {
+        // @ts-ignore
         chartInstance.ctx && chartInstance.ctx.setOption(ops)
     }
 
     onMounted(() => {
         setTimeout(() => {
+            // @ts-ignore
             chartInstance.ctx = echarts.init(chart.value)
             callback && callback(chartInstance.ctx)
             if (typeof option === 'function') updateOption(option())
@@ -24,6 +26,7 @@ export const useEcharts = (option, callback) => {
     })
 
     onUnmounted(() => {
+        // @ts-ignore
         chartInstance.ctx && chartInstance.ctx.dispose()
     })
 

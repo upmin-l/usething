@@ -12,7 +12,7 @@ category: Chart
 
 ```js
 import {watchEffect, ref} from 'vue'
-import {useEcharts} from 'vueThing/chart'
+import {useEcharts} from 'vueThing/utils'
 
 const chart = ref(null)
 const [chart, updateOption] = useEcharts()

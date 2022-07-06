@@ -248,7 +248,7 @@ packages:
     dev: true
 
   /@rollup/plugin-json/4.1.0_rollup@2.75.7:
-    resolution: {integrity: sha1-VOCYZ65pY8WThE2L16nHGClElvM=}
+    resolution: {integrity: sha512-yfLbTdNS6amI/2OpmbiBoW12vngr5NW2jCJVZSBEz+H5KfUJZ2M7sDjk0U6GOOdCWFVScShte29o9NezJ53TPw==}
     peerDependencies:
       rollup: ^1.20.0 || ^2.0.0
     dependencies:
@@ -257,7 +257,7 @@ packages:
     dev: true
 
   /@rollup/pluginutils/3.1.0_rollup@2.75.7:
-    resolution: {integrity: sha1-cGtFJO5tyLEDs8mVUz5a1oDAK5s=}
+    resolution: {integrity: sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==}
     engines: {node: '>= 8.0.0'}
     peerDependencies:
       rollup: ^1.20.0||^2.0.0
@@ -784,7 +784,7 @@ packages:
     dev: true
 
   /es-module-lexer/0.9.3:
-    resolution: {integrity: sha1-bxPbAMw4QXE32vdDZvU1yOtDjxk=}
+    resolution: {integrity: sha512-1HQ2M2sPtxwnvOvT1ZClHyQDiggdNjURWpY2we6aMKCQiUVxTmVs2UYPLIrD84sS+kMdUwfBSylbJPwNnBrnHQ==}
     dev: true
 
   /esbuild-android-64/0.14.48:
@@ -1079,7 +1079,7 @@ packages:
     dev: true
 
   /fsevents/2.3.2:
-    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=}
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true

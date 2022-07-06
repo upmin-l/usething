@@ -63,7 +63,7 @@ export async function readCoreData() {
             coreCon.functions.push(fn)
         }))
     }
-    coreCon.categories = ['chart']
+    coreCon.categories = ['utils']
     return coreCon
 }
 
