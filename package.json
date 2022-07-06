@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@iconify/json": "^2.1.73",
     "@rollup/plugin-json": "^4.1.0",
     "@types/echarts": "^4.9.15",
     "@types/fs-extra": "^9.0.13",

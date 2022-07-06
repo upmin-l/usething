@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    'Carbon:arrowRight': typeof import('~icons/carbon/arrow-right')['default']
     Home: typeof import('./theme/view/Home.vue')['default']
     HomeFeatures: typeof import('./theme/view/HomeFeatures.vue')['default']
     HomeHero: typeof import('./theme/view/HomeHero.vue')['default']

@@ -1,5 +1,6 @@
 ---
-layout: home
+page: true
+layout: page
 hero:
   name: VueThing
   text: Vue3可视化hooks库.

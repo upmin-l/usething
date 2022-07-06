@@ -7,3 +7,4 @@ export const packages = _packages as PackageIndexes['packages']
 export const categories = _categories as PackageIndexes['categories']
 
 export const functionNames = functions.map(f => f.name)
+export const getFunction = (name: string) => dataSource.functions.find(f => f.name === name)

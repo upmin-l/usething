@@ -5,3 +5,4 @@ dist
 .vcode
 dist-ssr
 *.local
+components.d.ts

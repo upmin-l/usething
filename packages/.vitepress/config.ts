@@ -1,3 +1,5 @@
+import {guide} from "./sidebar.config";
+
 export default {
     title: 'VueThing',
     base: '/',
@@ -17,14 +19,8 @@ export default {
                 link: 'https://play.vueuse.org',
               },
         ],
-        sidebar: [
-            {
-                text: 'Guide',
-                items: [
-                    { text: 'Introduction', link: '/introduction' },
-                    { text: 'Getting Started', link: '/getting-started' },
-                ]
-            }
-        ]
+        sidebar: {
+            '/guide/':guide
+        }
     }
 }

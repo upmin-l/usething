@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@iconify/json': ^2.1.73
   '@rollup/plugin-json': ^4.1.0
   '@types/echarts': ^4.9.15
   '@types/fs-extra': ^9.0.13
@@ -23,6 +24,7 @@ specifiers:
   vue: ^3.2.37
 
 devDependencies:
+  '@iconify/json': 2.1.73
   '@rollup/plugin-json': 4.1.0_rollup@2.75.7
   '@types/echarts': 4.9.15
   '@types/fs-extra': 9.0.13
@@ -203,6 +205,13 @@ packages:
       '@algolia/autocomplete-core': 1.6.3
       '@docsearch/css': 3.1.0
       algoliasearch: 4.13.1
+    dev: true
+
+  /@iconify/json/2.1.73:
+    resolution: {integrity: sha512-mRybH87M9TWNkXRbp4cncV3ZRt6JaQRnvMMFE+gokSA7xTOomxLCNBFn2lkBA1B4/0rQ9h/UffkS6XVd0gMYjQ==}
+    dependencies:
+      '@iconify/types': 1.1.0
+      pathe: 0.3.2
     dev: true
 
   /@iconify/types/1.1.0:
