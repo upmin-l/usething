@@ -6,3 +6,5 @@ dist
 dist-ssr
 *.local
 components.d.ts
+packages/.vitepress/components.d.ts
+index.json

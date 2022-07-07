@@ -17,7 +17,7 @@
     </div>
     <p class="actions flex gap-2 place-content-center">
       <a class="get-started" href="/guide/">开始使用<carbon:arrow-right class="icon" /></a>
-      <a class="go-github" href="https://github.com/upmin-l/usething" target="_blank"><carbon:logo-github class="icon" /> GitHub</a>
+      <a class="go-github" href="https://github.com/vueuse/vueuse" target="_blank"><carbon:logo-github class="icon" /> GitHub</a>
     </p>
   </header>
 </template>

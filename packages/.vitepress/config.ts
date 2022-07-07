@@ -1,4 +1,4 @@
-import {guide} from "./sidebar.config";
+import {guide, utils} from "./sidebar.config";
 
 export default {
     title: 'VueThing',
@@ -20,7 +20,8 @@ export default {
               },
         ],
         sidebar: {
-            '/guide/':guide
+            '/guide/':guide,
+            '/docUtils/':utils
         }
     }
 }
