@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "docs": "vitepress dev packages",
-    "build:rollup": "rollup -c"
+    "build:rollup": "rollup -c",
+    "copyMd": "nr copy:utils",
+    "copy:utils": ""
   },
   "keywords": [],
   "author": "",
@@ -25,12 +27,19 @@
     "fs-extra": "^10.1.0",
     "gray-matter": "^4.0.3",
     "rollup": "^2.75.7",
+    "rollup-plugin-dts": "^4.2.2",
     "rollup-plugin-esbuild": "^4.9.1",
+    "typescript": "^4.7.4",
     "unocss": "^0.42.0",
     "unplugin-icons": "^0.14.7",
     "unplugin-vue-components": "^0.21.0",
     "vite": "^2.9.13",
     "vitepress": "1.0.0-alpha.4",
     "vue": "^3.2.37"
+  },
+  "pnpm": {
+    "overrides": {
+      "vue": "^3.2.37"
+    }
   }
 }
