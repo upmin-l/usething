@@ -17,8 +17,7 @@
     </div>
     <p class="actions flex gap-2 place-content-center">
       <a class="get-started" href="/guide/">开始使用<carbon:arrow-right class="icon" /></a>
-<!--      <a class="setup" href="/functions">All Functions</a>-->
-<!--      <a class="setup" href="https://github.com/vueuse/vueuse" target="_blank"><carbon:logo-github class="icon" /> GitHub</a>-->
+      <a class="go-github" href="https://github.com/upmin-l/usething" target="_blank"><carbon:logo-github class="icon" /> GitHub</a>
     </p>
   </header>
 </template>
@@ -31,7 +30,7 @@
 .description {
   max-width: 760px;
   line-height: 1.5;
-  color: var(--vp-c-indigo);
+  color: var(--vp-c-text-2);
   transition: color 0.5s;
   font-size: 19px;
 }
@@ -42,7 +41,7 @@
 .actions a {
   font-size: 16px;
   display: inline-block;
-  background-color: var(--vt-c-bg-mute);
+  background-color: var(--vp-c-gray-light-4);
   padding: 8px 18px;
   font-weight: 500;
   border-radius: 8px;
@@ -53,5 +52,8 @@
   font-weight: 600;
   background-color: var(--vp-c-green);
   color: #fff;
+}
+.go-github{
+  color: var(--vp-c-indigo-soft);
 }
 </style>
