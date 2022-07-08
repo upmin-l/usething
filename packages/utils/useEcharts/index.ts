@@ -1,4 +1,5 @@
 import * as echarts from 'echarts'
+// @ts-ignore
 import { markRaw, onMounted, onUnmounted, ref} from 'vue'
 
 export const useEcharts = (option:Object, callback:Function) => {
