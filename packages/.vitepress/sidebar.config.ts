@@ -1,20 +1,13 @@
 import {categories, coreCategoryNames, dataSource} from '../../dataSource/dataSource'
 
 const data = Array.from(categories)
+export const coreCategory = coreCategoryNames.map(v => ({
+    text: v,
+    link: `/doc-${v.toLocaleLowerCase()}/`,
+}))
 export const guide = [
-    {
-        text: '指导',
-        items: [
-            {text: '介绍', link: '/guide/'}
-        ]
-    },
-    {
-        text: '丰富的hooks',
-        items: coreCategoryNames.map(v => ({
-            text: v,
-            link: `/doc-${v.toLocaleLowerCase()}/`,
-        }))
-    }
+    {text: '指导', items: [{text: '介绍', link: '/guide/'}]},
+    {text: '丰富的hooks', items: coreCategory}
 ]
 
 function getSidebar() {

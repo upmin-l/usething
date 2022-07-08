@@ -1,27 +1,22 @@
-import {guide, utils} from "./sidebar.config";
+import {coreCategory, guide, utils} from "./sidebar.config";
 
 export default {
     title: 'VueThing',
     base: '/',
     description: 'Collection of essential Vue Composition Utilities',
     ignoreDeadLinks: true,
-    themeConfig:{
+    themeConfig: {
         docsDir: 'packages',
-        logo:'/icon.png',
+        logo: '/icon.png',
         editLinks: true,
-        nav:[
-            {
-                text: 'Add-ons',
-                link: '/add-ons',
-              },
-              {
-                text: 'Playground',
-                link: 'https://play.vueuse.org',
-              },
+        nav: [
+            {text: '指南', link: '/guide/'},
+            {text: 'hooks 分类', items: coreCategory},
+
         ],
         sidebar: {
-            '/guide/':guide,
-            '/doc-utils/':utils
+            '/guide/': guide,
+            '/doc-utils/': utils
         }
     }
 }
