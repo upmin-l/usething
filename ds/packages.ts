@@ -5,4 +5,9 @@ export const packages:PackageManifest[] = [
         display: 'Utils',
         description: 'utils hooks',
     },
+    {
+        name: 'thingjs',
+        display: 'Thing.js',
+        description: 'thingjs hooks',
+    },
 ]

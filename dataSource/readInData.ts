@@ -36,7 +36,7 @@ export async function readCoreData() {
         const pkg :VueTPackage = {
             ...key,
             dir: (relative(DIR_ROOT, dir).replace(/\\/g, '/')),
-            docs: `${DOCS_URL}/${key.name}/README.html`
+            docs: `${DOCS_URL}/doc-${key.name}/README.html`
         }
         coreCon.packages[key.name] = pkg
         // 处理 每个hooks

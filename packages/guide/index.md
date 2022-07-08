@@ -4,5 +4,5 @@ VueThing 是一组基于[Composition API](https://v3.vuejs.org/guide/composition
 ## 安装
 
 ```bash
-npm i @vueuse/core
+npm i vuething
 ```

@@ -6,6 +6,7 @@
   "scripts": {
     "docs": "vitepress dev packages",
     "build:rollup": "rollup -c",
+    "build:source": "esno dataSource/readInData.ts",
     "copyMd": "nr copy:utils",
     "copy:utils": ""
   },

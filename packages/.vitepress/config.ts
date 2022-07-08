@@ -21,7 +21,7 @@ export default {
         ],
         sidebar: {
             '/guide/':guide,
-            '/docUtils/':utils
+            '/doc-utils/':utils
         }
     }
 }
