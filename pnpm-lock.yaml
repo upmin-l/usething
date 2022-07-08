@@ -1,5 +1,8 @@
 lockfileVersion: 5.4
 
+overrides:
+  vue-demi: 0.13.0
+
 specifiers:
   '@iconify/json': ^2.1.73
   '@rollup/plugin-json': ^4.1.0
@@ -24,6 +27,7 @@ specifiers:
   vite: ^2.9.13
   vitepress: 1.0.0-alpha.4
   vue: ^3.2.37
+  vue-demi: 0.13.0
 
 devDependencies:
   '@iconify/json': 2.1.73
@@ -49,6 +53,7 @@ devDependencies:
   vite: 2.9.13
   vitepress: 1.0.0-alpha.4
   vue: 3.2.37
+  vue-demi: 0.13.0_vue@3.2.37
 
 packages:
 
@@ -598,7 +603,7 @@ packages:
     dependencies:
       '@vueuse/shared': 7.7.1_vue@3.2.37
       vue: 3.2.37
-      vue-demi: 0.13.1_vue@3.2.37
+      vue-demi: 0.13.0_vue@3.2.37
     dev: true
 
   /@vueuse/core/8.7.5_vue@3.2.37:
@@ -616,7 +621,7 @@ packages:
       '@vueuse/metadata': 8.7.5
       '@vueuse/shared': 8.7.5_vue@3.2.37
       vue: 3.2.37
-      vue-demi: 0.13.1_vue@3.2.37
+      vue-demi: 0.13.0_vue@3.2.37
     dev: true
 
   /@vueuse/metadata/8.7.5:
@@ -635,7 +640,7 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.37
-      vue-demi: 0.13.1_vue@3.2.37
+      vue-demi: 0.13.0_vue@3.2.37
     dev: true
 
   /@vueuse/shared/8.7.5_vue@3.2.37:
@@ -650,7 +655,7 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.37
-      vue-demi: 0.13.1_vue@3.2.37
+      vue-demi: 0.13.0_vue@3.2.37
     dev: true
 
   /acorn/8.7.1:
@@ -1844,8 +1849,8 @@ packages:
     resolution: {integrity: sha512-Uw5ooOQxRASHgu6C7GVvUxisKXfSgW4oFlO+aa+PAkgmH89O3CXxEEzNRNtHSqtXFTl0nAC1uYj0GMSH27uwtQ==}
     dev: true
 
-  /vue-demi/0.13.1_vue@3.2.37:
-    resolution: {integrity: sha512-xmkJ56koG3ptpLnpgmIzk9/4nFf4CqduSJbUM0OdPoU87NwRuZ6x49OLhjSa/fC15fV+5CbEnrxU4oyE022svg==}
+  /vue-demi/0.13.0_vue@3.2.37:
+    resolution: {integrity: sha512-pu9R4Nydj+LMcKkIL1cnP1L2anJBTmVZzVWSdy5P1rkSRs9fxGCFrZmXdPTEsN37m5JtBVBSYKPk6xnORfjUsQ==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true

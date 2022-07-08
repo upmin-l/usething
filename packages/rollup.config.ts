@@ -3,7 +3,7 @@ import dts from 'rollup-plugin-dts'
 import esbuild from 'rollup-plugin-esbuild'
 import json from '@rollup/plugin-json'
 import type {RollupOptions, OutputOptions} from 'rollup'
-const dtsPlugin = [dts()]
+const dtsPlugin = [dts({respectExternal:true})]
 // import {resolve} from "path";
 // import fg from 'fast-glob'
 // import {functions} from '../dataSource/dataSource'
@@ -62,10 +62,7 @@ for (const {name, target,cjs,mjs,dts,external,iife,} of packages) {
                     format: 'es',
                 },
                 plugins: dtsPlugin,
-                external: [
-                    ...externals,
-                    ...(external || []),
-                ],
+                external: ['vue'],
             })
         }
     }
