@@ -4,10 +4,12 @@ import {join, relative, resolve} from "path";
 import fs from 'fs-extra'
 import matter from 'gray-matter'
 import chalk from 'chalk'
+
 export const DIR_ROOT = resolve(__dirname, '../')
 export const DIR_SRC = resolve(DIR_ROOT, 'packages')
 const DOCS_URL = 'http://localhost:3000'
 import {PackageIndexes, VueTfn, VueTPackage} from "./types";
+
 async function listPackages(dir: string) {
     const files = await fg('*', {
         onlyDirectories: true,
@@ -23,9 +25,8 @@ async function listPackages(dir: string) {
 }
 
 
-
 export async function readCoreData() {
-    const coreCon:PackageIndexes = {
+    const coreCon: PackageIndexes = {
         packages: {},
         categories: [],
         functions: []
@@ -33,7 +34,7 @@ export async function readCoreData() {
     for (const key of packages) {
         const dir = join(DIR_SRC, key.name)
         const functions = await listPackages(dir)
-        const pkg :VueTPackage = {
+        const pkg: VueTPackage = {
             ...key,
             dir: (relative(DIR_ROOT, dir).replace(/\\/g, '/')),
             docs: `${DOCS_URL}/doc-${key.name}/README.html`
@@ -45,18 +46,23 @@ export async function readCoreData() {
             // const tsPath = join(dir, item, 'index.ts')
             const fn: VueTfn = {
                 name: item,
-                package: pkg.name
+                package: pkg.name,
+                docs:`${DOCS_URL}/${pkg.name}/${item}/`
             }
-            fn.docs = `${DOCS_URL}/${pkg.name}/${item}/`
             const mdRaw = await fs.readFile(mdPath, 'utf-8')
             // content 内容 data 类型
-            const {content: data} = matter(mdRaw)
+            const {content: data, data: frontMatter} = matter(mdRaw)
             // 获取描述
             let description = (
                 data.replace(/\r\n/g, '\n')
                     .match(/# \w+[\s\n]+(.+?)(?:, |\. |\n|\.\n)/m) || [])[1] || ''
             description = description.trim()
             description = description.charAt(0).toLowerCase() + description.slice(1)
+            let related = frontMatter.related
+            if (related && related === 'string') {
+                related = related.split(',').map((v: string) => v.trim()).filter(Boolean)
+                if (related.length)fn.related = related
+            }
             // fn.category = ['core', 'shared'].includes(pkg.name) ? category : `@${pkg.display}`
             fn.category = pkg.display
             fn.description = description
@@ -69,12 +75,12 @@ export async function readCoreData() {
 
 async function run() {
     const res = await readCoreData()
-    await fs.writeJSON(join(resolve(__dirname,'./'), 'index.json'), res, { spaces: 2 })
+    await fs.writeJSON(join(resolve(__dirname, './'), 'index.json'), res, {spaces: 2})
 }
 
 run().then(() => {
     console.log(chalk.green(`================================================`))
     console.log(chalk.green(`                已生成数据源                      `))
-    console.log(chalk.green(`           (generated data source)`              ))
+    console.log(chalk.green(`           (generated data source)`))
     console.log(chalk.green(`================================================`))
 })

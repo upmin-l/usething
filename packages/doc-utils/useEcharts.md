@@ -1,5 +1,5 @@
 ---
-category: Chart
+category: Utils
 ---
 
 # useEcharts
@@ -8,7 +8,7 @@ category: Chart
 
 > NOTE: If you're using Vue Router, use [`useRoute`](https://router.vuejs.org/guide/advanced/composition-api.html)
 
-## Usage
+## 使用
 
 ```js
 import {watchEffect, ref} from 'vue'

@@ -12,7 +12,6 @@ export const guide = [
 
 function getSidebar() {
     let bar = []
-    console.log(data);
     for (const name of data) {
         const functions = dataSource.functions.filter(i => i.category === name);
         bar.push({

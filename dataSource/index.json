@@ -5,7 +5,7 @@
       "display": "Utils",
       "description": "utils hooks",
       "dir": "packages/utils",
-      "docs": "http://localhost:3000/utils/README.html"
+      "docs": "http://localhost:3000/doc-utils/README.html"
     }
   },
   "categories": [
@@ -18,6 +18,13 @@
       "docs": "http://localhost:3000/utils/useEcharts/",
       "category": "Utils",
       "description": "百度eChart 图表 初始化"
+    },
+    {
+      "name": "useThingMove",
+      "package": "utils",
+      "docs": "http://localhost:3000/utils/useThingMove/",
+      "category": "Utils",
+      "description": "让物体基于tween 补间动画 动起来"
     }
   ]
 }
