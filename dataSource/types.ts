@@ -26,6 +26,7 @@ export interface VueTfn {
     docs?: string,  // 文档地址
     category?: any, // 类别
     description?: string // 描述
+    related?:string[] //相关
 }
 
 

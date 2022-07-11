@@ -6,6 +6,7 @@ overrides:
 specifiers:
   '@iconify/json': ^2.1.73
   '@rollup/plugin-json': ^4.1.0
+  '@tweenjs/tween.js': ^18.6.4
   '@types/echarts': ^4.9.15
   '@types/fs-extra': ^9.0.13
   '@types/node': ^18.0.0
@@ -31,6 +32,7 @@ specifiers:
 devDependencies:
   '@iconify/json': 2.1.73
   '@rollup/plugin-json': 4.1.0_rollup@2.75.7
+  '@tweenjs/tween.js': 18.6.4
   '@types/echarts': 4.9.15
   '@types/fs-extra': 9.0.13
   '@types/node': 18.0.0
@@ -309,6 +311,10 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    dev: true
+
+  /@tweenjs/tween.js/18.6.4:
+    resolution: {integrity: sha512-lB9lMjuqjtuJrx7/kOkqQBtllspPIN+96OvTCeJ2j5FEzinoAXTdAMFnDAQT1KVPRlnYfBrqxtqP66vDM40xxQ==}
     dev: true
 
   /@types/echarts/4.9.15:
@@ -1150,7 +1156,7 @@ packages:
     dev: true
 
   /fsevents/2.3.2:
-    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=}
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
