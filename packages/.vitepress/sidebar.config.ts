@@ -10,20 +10,21 @@ export const guide = [
     {text: '丰富的hooks', items: coreCategory}
 ]
 
-function getSidebar() {
-    let bar = []
+function getSidebar(key:string) {
+    let bar: Map<string, Array<object>> = new Map()
     for (const name of data) {
         const functions = dataSource.functions.filter(i => i.category === name);
-        bar.push({
+        bar.set(name, [{
             text: name,
             items: functions.map(v => ({
                 text: v.name,
                 link: `/doc-utils/${v.name}`,
             })),
-            link: `/${functions[0].package}/README`
-        })
+        }])
     }
-    return bar
+    return bar.get(key)
 }
 
-export const utils = getSidebar()
+export const utils = getSidebar('Utils')
+export const ThingJs = getSidebar('Thing.js')
+export const ThreeJs = getSidebar('Three.js')

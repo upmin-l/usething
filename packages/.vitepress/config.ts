@@ -1,4 +1,4 @@
-import {coreCategory, guide, utils} from "./sidebar.config";
+import {coreCategory, guide, ThingJs, ThreeJs, utils} from "./sidebar.config";
 
 export default {
     title: 'VueThing',
@@ -16,7 +16,9 @@ export default {
         ],
         sidebar: {
             '/guide/': guide,
-            '/doc-utils/': utils
+            '/doc-utils/': utils,
+            '/doc-thing.js/': ThingJs,
+            '/doc-three.js/': ThreeJs
         }
     }
 }

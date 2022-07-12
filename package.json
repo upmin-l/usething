@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docs": "pnpm run build:source && pnpm run copyMd && vitepress dev packages",
+    "docs": "vitepress dev packages",
+    "dev:docs": "pnpm run build:source && pnpm run copyMd && vitepress dev packages",
     "build:rollup": "rollup -c",
     "build:source": "esno dataSource/readInData.ts",
     "copyMd": "pnpm run copy:utils",

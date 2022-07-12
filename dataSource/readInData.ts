@@ -68,13 +68,14 @@ export async function readCoreData() {
             fn.description = description
             coreCon.functions.push(fn)
         }))
+        coreCon.categories.push(key.display)
     }
-    coreCon.categories = ['Utils']
     return coreCon
 }
 
 async function run() {
     const res = await readCoreData()
+    console.log(res);
     await fs.writeJSON(join(resolve(__dirname, './'), 'index.json'), res, {spaces: 2})
 }
 
