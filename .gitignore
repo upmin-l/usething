@@ -7,6 +7,5 @@ dist-ssr
 *.local
 components.d.ts
 packages/.vitepress/components.d.ts
-packages/doc-utils/*.md
-packages/doc-utils/!index.md
+packages/doc-utils/use*.md
 index.json
