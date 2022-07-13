@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://github.com/upmin-l/vuething#gh-light-mode-only">
-  <img src="https://raw.githubusercontent.com/upmin-l/vuething/main/packages/public/logo-vertical.png#gh-light-mode-only" alt="VueUse - Collection of essential Vue Composition Utilities" width="300">
+  <img src="https://raw.githubusercontent.com/upmin-l/vuething/main/packages/public/logo-vertical.png#gh-light-mode-only" alt="VueThing - A 2D/3D hooks library based on Vue3" width="300">
 </a>
 <br>
 A 2D/3D hooks library based on Vue3
