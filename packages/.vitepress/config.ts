@@ -12,6 +12,7 @@ export default {
         nav: [
             {text: '指南', link: '/guide/'},
             {text: 'hooks 分类', items: coreCategory},
+            {text: '功能性组件', items: coreCategory},
 
         ],
         sidebar: {

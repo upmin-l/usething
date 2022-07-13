@@ -1,11 +1,11 @@
 {
   "name": "use-thing",
   "version": "1.0.0",
-  "description": "",
+  "description": "A 2D/3D hooks library based on Vue3",
   "main": "index.js",
   "scripts": {
+    "dev:docs": "pnpm run build:source && pnpm run copyMd && pnpm run docs",
     "docs": "vitepress dev packages",
-    "dev:docs": "pnpm run build:source && pnpm run copyMd && vitepress dev packages",
     "build:rollup": "rollup -c",
     "build:source": "esno dataSource/readInData.ts",
     "copyMd": "pnpm run copy:utils",
@@ -13,7 +13,7 @@
   },
   "keywords": ["vue","vuething"],
   "author": "upmin-l",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@iconify/json": "^2.1.73",
     "@rollup/plugin-json": "^4.1.0",
