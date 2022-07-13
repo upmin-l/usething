@@ -11,8 +11,8 @@
     "copyMd": "pnpm run copy:utils",
     "copy:utils": "esno build/copyMarkdown.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["vue","vuething"],
+  "author": "upmin-l",
   "license": "ISC",
   "devDependencies": {
     "@iconify/json": "^2.1.73",
