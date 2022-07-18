@@ -4,7 +4,7 @@ const data = Array.from(categories)
 const sign = process.env.DEV === 'development'
 export const coreCategory = coreCategoryNames.map(v => ({
     text: v,
-    link: `/functions#category=${v.toLocaleLowerCase()}`,
+    link: sign ? `/functions#category=${v.toLocaleLowerCase()}` : `/doc-${v.toLocaleLowerCase()}`,
 }))
 export const guide = [
     {text: '指导', items: [{text: '介绍', link: '/guide/'}]},
