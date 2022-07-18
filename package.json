@@ -4,14 +4,17 @@
   "description": "A 2D/3D hooks library based on Vue3",
   "main": "index.js",
   "scripts": {
-    "dev:docs": "pnpm run build:source && pnpm run copyMd && pnpm run docs",
-    "docs": "vitepress dev packages",
+    "docs": "pnpm run build:source && pnpm run copyMd && pnpm run docs",
+    "docs:dev": "cross-env NODE_ENV=development vitepress dev packages",
     "build:rollup": "rollup -c",
     "build:source": "esno dataSource/readInData.ts",
     "copyMd": "pnpm run copy:utils",
     "copy:utils": "esno build/copyMarkdown.ts"
   },
-  "keywords": ["vue","vuething"],
+  "keywords": [
+    "vue",
+    "vuething"
+  ],
   "author": "upmin-l",
   "license": "MIT",
   "devDependencies": {
