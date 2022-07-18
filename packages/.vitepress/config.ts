@@ -1,6 +1,4 @@
 import {coreCategory, guide, ThingJs, ThreeJs, utils} from "./sidebar.config";
-
-console.log(process.env.NODE_ENV);
 export default {
     title: 'VueThing',
     base: '/',
@@ -17,7 +15,7 @@ export default {
 
         ],
         sidebar: {
-            '/guide/': guide,
+            '/guide/': process.env.DEV?utils:guide,
             '/doc-utils/': utils,
             '/doc-thing.js/': ThingJs,
             '/doc-three.js/': ThreeJs

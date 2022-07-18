@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "docs": "pnpm run build:source && pnpm run copyMd && pnpm run docs",
-    "docs:dev": "cross-env NODE_ENV=development vitepress dev packages",
+    "docs:dev": "cross-env DEV=development vitepress dev packages",
     "build:rollup": "rollup -c",
     "build:source": "esno dataSource/readInData.ts",
     "copyMd": "pnpm run copy:utils",

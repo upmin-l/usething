@@ -75,7 +75,6 @@ export async function readCoreData() {
 
 async function run() {
     const res = await readCoreData()
-    console.log(res);
     await fs.writeJSON(join(resolve(__dirname, './'), 'index.json'), res, {spaces: 2})
 }
 
