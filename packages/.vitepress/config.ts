@@ -14,6 +14,9 @@ export default {
             {text: '功能性组件', items: coreCategory},
 
         ],
+        socialLinks: [
+            { icon: 'github', link: 'https://github.com/upmin-l/usething' }
+        ],
         sidebar: {
             '/guide/': process.env.DEV?utils:guide,
             '/doc-utils/': utils,
