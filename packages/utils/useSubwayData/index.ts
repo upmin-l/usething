@@ -10,7 +10,7 @@ const srhData = new Map<string,[string]>([
     ['香港',['8100_drw_xianggang.json']],
 ])
 const url = 'http://map.amap.com/service/subway?srhdata='
-export const useSubway = () => {
+export const useSubwayData = () => {
 
 }
 
