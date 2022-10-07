@@ -2,7 +2,7 @@ import * as echarts from 'echarts'
 // @ts-ignore
 import { markRaw, onMounted, onUnmounted, ref} from 'vue'
 
-export const useEcharts = (option:Object, callback:Function) => {
+export const useEcharts = (option?:Object, callback?:Function) => {
     const chart = ref()
     const chartInstance = markRaw({
         ctx: null
@@ -22,7 +22,9 @@ export const useEcharts = (option:Object, callback:Function) => {
             chartInstance.ctx = echarts.init(chart.value)
             callback && callback(chartInstance.ctx)
             if (typeof option === 'function') updateOption(option())
-            else updateOption(option)
+            else { // @ts-ignore
+                updateOption(option)
+            }
         })
     })
 

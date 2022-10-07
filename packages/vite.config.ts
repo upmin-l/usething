@@ -4,8 +4,19 @@ import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import {resolve} from "path";
+import inspect from 'vite-plugin-inspect'
 import {markdownTransform} from './plugins/markdownTransform'
 export default defineConfig({
+    server: {
+        hmr: {
+            overlay: false,
+        },
+        fs: {
+            allow: [
+                resolve(__dirname, '..'),
+            ],
+        },
+    },
     plugins:[
         markdownTransform(),
         Components({
@@ -23,6 +34,7 @@ export default defineConfig({
             compiler: 'vue3',
             defaultStyle: 'display: inline-block',
         }),
-        UnoCSS()
+        UnoCSS(),
+        inspect()
     ]
 })

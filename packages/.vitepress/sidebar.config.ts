@@ -4,7 +4,7 @@ const data = Array.from(categories)
 const sign = process.env.DEV === 'development'
 export const coreCategory = coreCategoryNames.map(v => ({
     text: v,
-    link: sign ? `/functions#category=${v.toLocaleLowerCase()}` : `/doc-${v.toLocaleLowerCase()}`,
+    link: sign ? `/functions#category=${v.toLocaleLowerCase()}` : `/doc-${v.toLocaleLowerCase()}/`,
 }))
 export const guide = [
     {text: '指导', items: [{text: '介绍', link: '/guide/'}]},
@@ -27,16 +27,19 @@ function getSidebar(key: string = 'dev') {
         } else {
             bar.set(name, [{
                 text: name,
-                items: functions.map(v => ({
-                    text: v.name,
-                    link: `/doc-utils/${v.name}`,
-                })),
+                items: [
+                    {text: 'Utils', link: '/doc-utils/'},
+                    ...functions.map(v => ({
+                        text: v.name,
+                        link: `/doc-utils/${v.name}`,
+                    }))
+                ],
             }])
         }
     }
     return sign ? links : bar.get(key)
 }
 
-export const utils = getSidebar('Utils')
-export const ThingJs = getSidebar('Thing.js')
-export const ThreeJs = getSidebar('Three.js')
+export const utils = getSidebar('Utils')||[]
+export const ThingJs = getSidebar('Thing.js')||[]
+export const ThreeJs = getSidebar('Three.js')||[]

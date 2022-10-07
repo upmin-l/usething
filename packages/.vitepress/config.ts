@@ -23,5 +23,17 @@ export default {
             '/doc-thing.js/': ThingJs,
             '/doc-three.js/': ThreeJs
         }
+    },
+    markdown: {
+        // options for markdown-it-anchor
+        anchor: { permalink: false },
+
+        // options for markdown-it-toc
+        toc: { includeLevel: [1, 2] },
+
+        config: (md:any) => {
+            const { demoBlockPlugin } = require('vitepress-theme-demoblock')
+            md.use(demoBlockPlugin)
+        }
     }
 }

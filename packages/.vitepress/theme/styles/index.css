@@ -1,0 +1,15 @@
+@media (min-width: 1440px) {
+    .VPSidebar[data-v-5473288d] {
+        padding-left: 32px;
+        width: 272px;
+    }
+    .VPContent.has-sidebar[data-v-55bc7b2a]{
+        padding-left: 272px;
+    }
+}
+.container[data-v-d84f2262]{
+    margin: 0;
+}
+.content-container[data-v-8dbeee2e]{
+    max-width:100%
+}
