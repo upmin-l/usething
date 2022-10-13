@@ -4,15 +4,17 @@ const data = Array.from(categories)
 const sign = process.env.DEV === 'development'
 export const coreCategory = coreCategoryNames.map(v => ({
     text: v,
-    link: sign ? `/functions#category=${v.toLocaleLowerCase()}` : `/doc-${v.toLocaleLowerCase()}/`,
+    activeMatch: '___',
+    link: `/hooks#category=${encodeURIComponent(v)}`,
+    // link: sign ? `/functions#category=${v.toLocaleLowerCase()}` : `/doc-${v.toLocaleLowerCase()}/`,
 }))
 export const guide = [
     {text: '指导', items: [{text: '介绍', link: '/guide/'}]},
     {text: '丰富的hooks', items: coreCategory}
 ]
 
-function getSidebar(key: string = 'dev') {
-    let bar: Map<string, Array<object>> = new Map()
+export function getSidebar() {
+    // let bar: Map<string, Array<object>> = new Map()
     const links = []
     for (const name of data) {
         const functions = dataSource.functions.filter(i => i.category === name);
@@ -25,21 +27,21 @@ function getSidebar(key: string = 'dev') {
                 })),
             })
         } else {
-            bar.set(name, [{
-                text: name,
-                items: [
-                    {text: 'Utils', link: '/doc-utils/'},
-                    ...functions.map(v => ({
-                        text: v.name,
-                        link: `/doc-utils/${v.name}`,
-                    }))
-                ],
-            }])
+            // bar.set(name, [{
+            //     text: name,
+            //     items: [
+            //         {text: 'Utils', link: '/doc-utils/'},
+            //         ...functions.map(v => ({
+            //             text: v.name,
+            //             link: `/doc-utils/${v.name}`,
+            //         }))
+            //     ],
+            // }])
         }
     }
-    return sign ? links : bar.get(key)
+    return links
 }
 
-export const utils = getSidebar('Utils')||[]
-export const ThingJs = getSidebar('Thing.js')||[]
-export const ThreeJs = getSidebar('Three.js')||[]
+// export const utils = getSidebar('Utils')||[]
+// export const ThingJs = getSidebar('Thing.js')||[]
+// export const ThreeJs = getSidebar('Three.js')||[]

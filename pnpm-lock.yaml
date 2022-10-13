@@ -18,6 +18,7 @@ specifiers:
   esbuild-register: ^3.3.3
   fast-glob: ^3.2.11
   fs-extra: ^10.1.0
+  fuse.js: ^6.6.2
   gray-matter: ^4.0.3
   marked: ^4.0.18
   rollup: ^2.75.7
@@ -48,6 +49,7 @@ devDependencies:
   esbuild-register: 3.3.3
   fast-glob: 3.2.11
   fs-extra: 10.1.0
+  fuse.js: 6.6.2
   gray-matter: 4.0.3
   marked: 4.0.18
   rollup: 2.75.7
@@ -1396,6 +1398,11 @@ packages:
 
   /function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
+    dev: true
+
+  /fuse.js/6.6.2:
+    resolution: {integrity: sha512-cJaJkxCCxC8qIIcPBF9yGxY0W/tVZS3uEISDxhYIdtk8OL93pe+6Zj7LjCqVV4dzbqcriOZ+kQ/NE4RXZHsIGA==}
+    engines: {node: '>=10'}
     dev: true
 
   /get-stream/6.0.1:

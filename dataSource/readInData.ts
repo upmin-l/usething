@@ -37,7 +37,7 @@ export async function readCoreData() {
         const pkg: VueTPackage = {
             ...key,
             dir: (relative(DIR_ROOT, dir).replace(/\\/g, '/')),
-            docs: `${DOCS_URL}/doc-${key.name}/README.html`
+            docs: `${DOCS_URL}/${key.name}/README.html`
         }
         coreCon.packages[key.name] = pkg
         // 处理 每个hooks
@@ -52,6 +52,7 @@ export async function readCoreData() {
             const mdRaw = await fs.readFile(mdPath, 'utf-8')
             // content 内容 data 类型
             const {content: data, data: frontMatter} = matter(mdRaw)
+            const category = frontMatter.category
             // 获取描述
             let description = (
                 data.replace(/\r\n/g, '\n')
@@ -63,16 +64,32 @@ export async function readCoreData() {
                 related = related.split(',').map((v: string) => v.trim()).filter(Boolean)
                 if (related.length)fn.related = related
             }
-            // fn.category = ['core', 'shared'].includes(pkg.name) ? category : `@${pkg.display}`
-            fn.category = pkg.display
+            fn.category = ['core'].includes(pkg.name) ? category : `@${pkg.display}`
+            // fn.category = pkg.category
             fn.description = description
             coreCon.functions.push(fn)
         }))
-        coreCon.categories.push(key.display)
+        coreCon.categories =getCategories(coreCon.functions)
     }
     return coreCon
 }
 
+function getCategories(functions:VueTfn[]){
+    return uniq(
+        functions
+            .map(i => i.category)
+            .filter(Boolean),
+    ).sort(
+        (a, b) => (a.startsWith('@') && !b.startsWith('@'))
+            ? 1
+            : (b.startsWith('@') && !a.startsWith('@'))
+                ? -1
+                : a.localeCompare(b),
+    )
+}
+export function uniq<T extends any[]>(a: T) {
+    return Array.from(new Set(a))
+}
 async function run() {
     const res = await readCoreData()
     await fs.writeJSON(join(resolve(__dirname, './'), 'index.json'), res, {spaces: 2})

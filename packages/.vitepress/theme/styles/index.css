@@ -13,3 +13,27 @@
 .content-container[data-v-8dbeee2e]{
     max-width:100%
 }
+
+.hooks-button{
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    -webkit-appearance: none;
+    text-align: center;
+    outline: none;
+    padding: 7px 12px;
+    margin-left: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    font-weight: 500;
+    color: #7f8280;
+    transition: transform .2s ease;
+    border: none
+}
+.hooks-button.active{
+    background-color: rgba(96, 188, 244, 0.1);
+    color: rgb(62,175,124);
+    border-spacing: 3px;
+}

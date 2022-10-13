@@ -3,6 +3,7 @@
 export interface PackageManifest {
     name: string
     display: string
+    category:string,
     addon?: boolean
     author?: string
     description?: string

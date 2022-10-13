@@ -32,6 +32,7 @@
     "esbuild-register": "^3.3.3",
     "fast-glob": "^3.2.11",
     "fs-extra": "^10.1.0",
+    "fuse.js": "^6.6.2",
     "gray-matter": "^4.0.3",
     "marked": "^4.0.18",
     "rollup": "^2.75.7",

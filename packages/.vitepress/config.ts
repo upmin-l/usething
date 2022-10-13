@@ -1,4 +1,5 @@
-import {coreCategory, guide, ThingJs, ThreeJs, utils} from "./sidebar.config";
+import {coreCategory, getSidebar, guide} from "./sidebar.config";
+const list = getSidebar()
 export default {
     title: 'VueThing',
     base: '/',
@@ -15,24 +16,23 @@ export default {
 
         ],
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/upmin-l/usething' }
+            {icon: 'github', link: 'https://github.com/upmin-l/usething'}
         ],
         sidebar: {
-            '/guide/': process.env.DEV?utils:guide,
-            '/doc-utils/': utils,
-            '/doc-thing.js/': ThingJs,
-            '/doc-three.js/': ThreeJs
+            '/guide/': guide,
+            '/hooks':list,
+            '/core/':list,
         }
     },
     markdown: {
         // options for markdown-it-anchor
-        anchor: { permalink: false },
+        anchor: {permalink: false},
 
         // options for markdown-it-toc
-        toc: { includeLevel: [1, 2] },
+        toc: {includeLevel: [1, 2]},
 
-        config: (md:any) => {
-            const { demoBlockPlugin } = require('vitepress-theme-demoblock')
+        config: (md: any) => {
+            const {demoBlockPlugin} = require('vitepress-theme-demoblock')
             md.use(demoBlockPlugin)
         }
     }

@@ -1,5 +1,5 @@
 ---
-category: Utils
+category: Core
 ---
 
 # useThingMove
