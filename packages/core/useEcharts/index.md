@@ -8,10 +8,6 @@ category: Utils
 
 > NOTE: If you're using Vue Router, use [`useRoute`](https://router.vuejs.org/guide/advanced/composition-api.html)
 
-## 使用
-```demo
-<demo />
-```
 
 ```js
 import {watchEffect, ref} from 'vue'

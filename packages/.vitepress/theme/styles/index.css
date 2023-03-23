@@ -30,7 +30,7 @@
     font-weight: 500;
     color: #7f8280;
     transition: transform .2s ease;
-    border: none
+    border: none;
 }
 .hooks-button.active{
     background-color: rgba(96, 188, 244, 0.1);

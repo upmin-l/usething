@@ -7,14 +7,18 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "preserveSymlinks": true,
+    "declarationDir": "./types",
     "rootDir": ".",
     "baseUrl": ".",
     "skipDefaultLibCheck": true,
     "noUnusedLocals": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
-    "strict": true
+    "strict": true,
+    "declaration": true,
+    "jsx": "preserve",
+    "allowJs":true,
+    "outDir":"./dist"
   },
   "exclude": [
     "node_modules",
